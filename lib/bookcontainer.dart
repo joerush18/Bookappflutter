@@ -32,7 +32,7 @@ class Boxlayout extends StatelessWidget {
       onTap: onClick,
       child: Container(
           height: 180,
-          margin: EdgeInsets.all(10),
+          margin: EdgeInsets.all(8),
           decoration: BoxDecoration(
             color: kCardContainercolor,
             borderRadius: BorderRadius.only(

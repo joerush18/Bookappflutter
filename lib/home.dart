@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'bookcontainer.dart';
 import 'constants.dart';
-import 'drawerdesign.dart';
 import 'bookcontent.dart';
+import 'BottomNavigation.dart';
 
 class Home2 extends StatefulWidget {
   @override
@@ -12,28 +12,27 @@ class Home2 extends StatefulWidget {
 class _Home2State extends State<Home2> {
   @override
   Widget build(BuildContext context) {
+    // GlobalKey _bottomNavigationKey = GlobalKey();
+    //int _page=0;
     return Scaffold(
       backgroundColor: kbackgroundColor,
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         actions: <Widget>[
           Icon(Icons.add_shopping_cart),
         ],
         //shape:,
-      //  leading: Icon(Icons.menu),
+        leading: Icon(Icons.menu),
         title: Center(
           child: Text(
             'E-BOOKs',
-            style: TextStyle(
-                color: Colors.black,
-                fontSize: 20,
-                fontWeight: FontWeight.w400,
-                fontFamily: 'WorkSans'),
+            style: kAppbarStyletext,
           ),
         ),
       ),
-    drawer: DrawerDesign(),
-
-
+      bottomNavigationBar: BottomNavigationDesign(),
+      extendBodyBehindAppBar: false,
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints viewportConstraints) {
           return SingleChildScrollView(
@@ -46,9 +45,6 @@ class _Home2State extends State<Home2> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
-                    SizedBox(
-                      height: 10,
-                    ),
                     Expanded(
                       child: Container(
                         // height: double.infinity,
@@ -63,7 +59,11 @@ class _Home2State extends State<Home2> {
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) {
-                                      return BookContent();
+                                      return BookContent(
+                                        booklabel: 'b1',
+                                        authorname: 'JamesDarphin',
+                                        titleofbook: 'Vector Designing',
+                                      );
                                     },
                                   ),
                                 );
@@ -72,10 +72,38 @@ class _Home2State extends State<Home2> {
                             Bookcontainer(
                               booklabel: 'b2',
                               bookname: 'Graphic D',
+                              onClick: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return BookContent(
+                                        booklabel: 'b2',
+                                        authorname: 'Rohit Jain',
+                                        titleofbook: 'Graphic Designing',
+                                      );
+                                    },
+                                  ),
+                                );
+                              },
                             ),
                             Bookcontainer(
                               booklabel: 'b3',
                               bookname: 'Design',
+                              onClick: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return BookContent(
+                                        booklabel: 'b3',
+                                        authorname: 'Don Norman',
+                                        titleofbook: 'Design Everyday',
+                                      );
+                                    },
+                                  ),
+                                );
+                              },
                             ),
                           ],
                         ),
@@ -90,14 +118,56 @@ class _Home2State extends State<Home2> {
                             Bookcontainer(
                               booklabel: 'b4',
                               bookname: 'Brand D',
+                              onClick: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return BookContent(
+                                        booklabel: 'b4',
+                                        authorname: 'Alan John',
+                                        titleofbook: 'Brand Designing',
+                                      );
+                                    },
+                                  ),
+                                );
+                              },
                             ),
                             Bookcontainer(
                               booklabel: 'b5',
                               bookname: 'Type D',
+                              onClick: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return BookContent(
+                                        booklabel: 'b5',
+                                        authorname: 'Mark Anderson',
+                                        titleofbook: 'Type Designing',
+                                      );
+                                    },
+                                  ),
+                                );
+                              },
                             ),
                             Bookcontainer(
                               booklabel: 'b6',
                               bookname: 'Love D',
+                              onClick: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return BookContent(
+                                        booklabel: 'b6',
+                                        authorname: 'khalil Ahmed',
+                                        titleofbook: 'Logo Desigining',
+                                      );
+                                    },
+                                  ),
+                                );
+                              },
                             ),
                           ],
                         ),
@@ -113,14 +183,56 @@ class _Home2State extends State<Home2> {
                             Bookcontainer(
                               booklabel: 'b7',
                               bookname: 'Creative D',
+                              onClick: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return BookContent(
+                                        booklabel: 'b7',
+                                        authorname: 'Steve Robins',
+                                        titleofbook: 'Creative Design',
+                                      );
+                                    },
+                                  ),
+                                );
+                              },
                             ),
                             Bookcontainer(
                               booklabel: 'b8',
                               bookname: 'Portfolio D',
+                              onClick: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return BookContent(
+                                        booklabel: 'b8',
+                                        authorname: 'Michael Janet',
+                                        titleofbook: 'Burn Portfolio',
+                                      );
+                                    },
+                                  ),
+                                );
+                              },
                             ),
                             Bookcontainer(
                               booklabel: 'b9',
                               bookname: 'Thinking D',
+                              onClick: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return BookContent(
+                                        booklabel: 'b9',
+                                        authorname: 'Joe Rush',
+                                        titleofbook: 'Design Thinking',
+                                      );
+                                    },
+                                  ),
+                                );
+                              },
                             ),
                           ],
                         ),
@@ -128,7 +240,7 @@ class _Home2State extends State<Home2> {
                         // decoration: kboxDecorationstyle1,
                       ),
                     ),
-                     Expanded(
+                    Expanded(
                       child: Container(
                         //   height: double.infinity,
                         //   width: double.infinity,
@@ -137,14 +249,56 @@ class _Home2State extends State<Home2> {
                             Bookcontainer(
                               booklabel: 'hello',
                               bookname: 'Empty',
+                              onClick: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return BookContent(
+                                        booklabel: 'hi',
+                                        authorname: 'Jacob',
+                                        titleofbook: 'Empty',
+                                      );
+                                    },
+                                  ),
+                                );
+                              },
                             ),
                             Bookcontainer(
                               booklabel: 'nice',
                               bookname: 'Empty',
+                              onClick: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return BookContent(
+                                        booklabel: 'hi',
+                                        authorname: 'Jacob',
+                                        titleofbook: 'Empty',
+                                      );
+                                    },
+                                  ),
+                                );
+                              },
                             ),
                             Bookcontainer(
                               booklabel: 'hi',
                               bookname: 'Empty',
+                              onClick: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return BookContent(
+                                        booklabel: 'hi',
+                                        authorname: 'Jacob',
+                                        titleofbook: 'Empty',
+                                      );
+                                    },
+                                  ),
+                                );
+                              },
                             ),
                           ],
                         ),
@@ -162,5 +316,3 @@ class _Home2State extends State<Home2> {
     );
   }
 }
-
-

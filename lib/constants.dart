@@ -7,7 +7,7 @@ const kCardContainertextStyle = TextStyle(
   color: Colors.black,
   fontSize: 15,
   fontWeight: FontWeight.w600,
-  fontFamily: 'Roboto',
+  fontFamily: 'WorkSans',
 );
 
 final kboxDecorationstyle1 = BoxDecoration(
@@ -18,12 +18,17 @@ final kboxDecorationstyle1 = BoxDecoration(
   ),
 );
 
-final kCardDecoration= BoxDecoration(
-            color: kCardContainercolor,
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(20),
-              bottomRight: Radius.circular(20),
-              topLeft: Radius.circular(20),
-              topRight: Radius.circular(20)
-            ),);
+final kCardDecoration = BoxDecoration(
+  color: kCardContainercolor,
+  borderRadius: BorderRadius.only(
+      bottomLeft: Radius.circular(20),
+      bottomRight: Radius.circular(20),
+      topLeft: Radius.circular(20),
+      topRight: Radius.circular(20)),
+);
 
+final kAppbarStyletext = TextStyle(
+    color: Colors.black,
+    fontSize: 20,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'WorkSans');
